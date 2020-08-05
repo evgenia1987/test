@@ -5,10 +5,23 @@
   <script>
     'use strict'
 
-    let message = (login == 'Сотрудник')? 'Привет' :
-     (login == 'Директор')? 'Здравствуйте' :
-     (login == '') ? 'Нет логина' :
-     '';
+     let login = prompt('Введите логин','');
+
+     if (login=='Админ'){
+        let psw = prompt('Введите пароль','');
+        if (psw=='Я главный')
+        alert('Здравствуйте!');
+        else if (psw==''||psw==null)
+            alert('Отменено');
+        else
+            alert('Неверный пароль');
+     }
+     else if (login==''||login==null)
+        alert('Отменено');
+     else
+        alert('Я вас не знаю');
+
+
     
   </script>
 
