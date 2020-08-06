@@ -4,14 +4,26 @@
 
   <script>
     'use strict'
-   let i;
-     while (true){
-        i = prompt('Введите число больше 100','');
-        if (i>100||i==null)
-         break;
-
-     }
-
+   let n,p=0;
+   n = prompt('Задайте предел диапазона для рассчета простых чисел','min 2');
+   if (n<2)
+      alert ('Некорректное значение границы диапазона');
+   for(let i=2;i<=n;i++){
+      for(let j=2;j<=i;j++){
+         if((i%j==0)&&(i!=j)){
+            p++;
+            break;
+         }
+         //else
+            
+      }
+      if(!p){
+         alert(`Простое число ${i}`);
+         p=0;
+      }
+      p=0;
+   }
+   
 
     
   </script>
