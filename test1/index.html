@@ -4,25 +4,20 @@
 
   <script>
     'use strict'
-   let n,p=0;
-   n = prompt('Задайте предел диапазона для рассчета простых чисел','min 2');
-   if (n<2)
-      alert ('Некорректное значение границы диапазона');
-   for(let i=2;i<=n;i++){
-      for(let j=2;j<=i;j++){
-         if((i%j==0)&&(i!=j)){
-            p++;
-            break;
-         }
-         //else
-            
-      }
-      if(!p){
-         alert(`Простое число ${i}`);
-         p=0;
-      }
-      p=0;
+   const number = +prompt('Введите число между 0 и 3', '');
+   switch(number){
+      case 0:
+         alert('Вы ввели число 0');
+         break;
+      case 1:
+         alert('Вы ввели число 1');
+         break;      
+      case 2:
+      case 3:
+         alert('Вы ввели число 2, а может и 3');
+         break;
    }
+
    
 
     
