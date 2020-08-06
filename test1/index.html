@@ -4,13 +4,15 @@
 
   <script>
     'use strict'
-   function checkAge(age){
-      return age>18 ? true : confirm('Родители разрешили?');
+   let a,b;
+   a = prompt('Введите первое число?','');
+   b = prompt('Введите второе число?','');
+
+   function min(n1,n2){
+      return n1<n2 ? n1 : n2;
    }
-   function checkAge(age){
-      return age>18 || confirm('Родители разрешили?') ;
-   }
-   
+
+   alert('Минимальное значение = '+ min(a,b));
 
     
   </script>
