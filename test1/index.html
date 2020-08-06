@@ -4,19 +4,15 @@
 
   <script>
     'use strict'
-   let a,b;
-   a = prompt('X?','');
-   b = prompt('N?','');
-
-   function pow(x,n){
-      let pw = 1;
-      for (let i = 0;i<n;i++){
-         pw=pw*x;
+      function ask(question, yes, no) {
+       if (confirm(question)) yes()
+       else no();
       }
-      return pw;
-   }
-
-   alert(`${a} в степени ${b} = `+ pow(a,b));
+      ask(
+         "Вы согласны?",
+         () => alert("Вы согласились."),
+         () => alert("Вы отменили выполнение.")
+         );
 
     
   </script>
