@@ -5,14 +5,18 @@
   <script>
     'use strict'
    let a,b;
-   a = prompt('Введите первое число?','');
-   b = prompt('Введите второе число?','');
+   a = prompt('X?','');
+   b = prompt('N?','');
 
-   function min(n1,n2){
-      return n1<n2 ? n1 : n2;
+   function pow(x,n){
+      let pw = 1;
+      for (let i = 0;i<n;i++){
+         pw=pw*x;
+      }
+      return pw;
    }
 
-   alert('Минимальное значение = '+ min(a,b));
+   alert(`${a} в степени ${b} = `+ pow(a,b));
 
     
   </script>
