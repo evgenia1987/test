@@ -1,10 +1,9 @@
 'use strict'
 function isEmpty(obj){
-    let noProp = true;
     for (let key in obj){
-        noProp = noProp && (obj[key]===undefined);
+        return false; // если вошли в тело цикла, значит свойства у объекта есть
     }
-    return noProp;
+    return true;
 }
 
 let schedule = {};
