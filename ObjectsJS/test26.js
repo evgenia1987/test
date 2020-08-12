@@ -4,6 +4,7 @@ function Calculator() {
         "-" : (a,b) => a - b,
         "+" : (a,b) => a + b
     };
+    
     this.calculate = function(str) {
 
         if ((!str) && (typeof str == 'string')) {
@@ -21,9 +22,10 @@ function Calculator() {
        
         return this.methods[op](a,b);
     };
+
     this.addMethod = function(name, func) {
-        this.methods[name] = func;
-    }
+        this.methods[name] = func; // вот тут не совсем поняла из какого правила языка следует такая запись (((
+    };
 }
 
 const powerCalc = new Calculator;
