@@ -13,3 +13,4 @@ const response = await fetch(url);
 
 loadJson('no-such-user.json') // (3)
   .catch(alert); // Error: 404
+  // проверка 
